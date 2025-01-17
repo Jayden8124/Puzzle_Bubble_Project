@@ -1,2 +1,2 @@
-﻿using var game = new PuzzleBubblePJ.Game1();
+﻿using var game = new PuzzleBubblePJ.PuzzleBubblePJ();
 game.Run();
