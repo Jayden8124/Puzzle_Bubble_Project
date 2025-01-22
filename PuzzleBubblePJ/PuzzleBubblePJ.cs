@@ -12,6 +12,15 @@ public class PuzzleBubblePJ : Game
 
     Texture2D _bubble, _gun, _rect;
 
+    enum GameState
+    {
+        Start,
+        Waiting,
+        GameOver
+    }
+
+    GameState _currentGameState;
+
     public PuzzleBubblePJ()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -33,6 +42,7 @@ public class PuzzleBubblePJ : Game
         _graphics.ApplyChanges();
 
         // TODO: Add your initialization logic here
+
         base.Initialize();
     }
 
@@ -58,6 +68,12 @@ public class PuzzleBubblePJ : Game
             Exit();
 
         MouseState state = Mouse.GetState();
+
+        if (state.LeftButton == ButtonState.Pressed )
+        {
+            // _currentGameState = GameState.Waiting;
+        }
+
         // TODO: Add your update logic here
 
         base.Update(gameTime);
